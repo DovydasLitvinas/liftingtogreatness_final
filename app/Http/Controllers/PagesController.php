@@ -8,7 +8,7 @@ use Auth;
 class PagesController extends Controller
 {
     public function index(){
-        return view('pages.index');
+        return view('pages.home');
     }
     public function apie(){
         return view('pages.apie');
@@ -17,6 +17,6 @@ class PagesController extends Controller
         return view('pages.kontaktai');
     }
     public function login2(){
-        return view('pages.login2');
+        return view('pages.login_register');
     }
 }

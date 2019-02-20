@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 <head>
-  <title>{{config('app.name', 'Lifting to Greatness')}}</title>
-
-  <!-- CSRF Token -->
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-
+  <title>Lifting to Greatness</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -47,7 +43,7 @@
     /*-------------------------------------------------*
     /* Add a gray background color and some padding to the footer */
     footer {
-      margin-top: 20px;
+      margin-top: 1px;
       box-shadow: inset 0 1px 10px #000000;
       background-color: #565656;
       padding: 25px;
@@ -89,6 +85,7 @@
   }
   .right-menu {
     list-style-type: none;
+    float: right;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -114,7 +111,11 @@
     border-radius: 5px;
     text-decoration: none;
   }
-
+  .right_menu_item{
+    margin-top: 30px;
+    float: right;
+    overflow: hidden;
+  }
   .left-menu .left_menu_item:hover, .right-menu .right_menu_item:hover, .dropbtn-mobile:hover, .dropbtn-mobile:focus  {
       background-color: #ddd;
       color: black;
@@ -150,8 +151,12 @@
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 0px 0px 5px 5px;
-    top: 9.5%;
+    top: 10%;
     right: 0;
+}
+
+.glyphicon.glyphicon-user{
+  margin-top: 35px;
 }
 
 .follow_me {
@@ -227,121 +232,86 @@
 .insta_img {
 	position: static;
 }
-.userName {
-  float: left;
-  padding-top: 23%;
+.content {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-image: url('images/dumbbells.jpg');
+  background-repeat: no-repeat;
+}
+
+#img_me {
+  padding-right: 10px;
+}
+.contact_menu {
+  max-width: 300px;
+  float: right;
+  margin-right: 40%;
+  margin-top: 15%;
+  margin-bottom: 10%;
   color: white;
 }
-.logoutbtn {
-  float: right;
-}
-.login-register {
-  float: right;
-}
-.glyphicon-user {
-  height: 35px;
-  width: 35px;
-  color: #009BC1;
-}
-.lower {
-  margin-top: 20%;
-}
-.merch {
-  padding-top: 5%;
-}
-.clothing {
-  background-image: url('images/shirt_stockimage.jpg');
-  transition: transform .2s;
-}
-.nutrition {
-  background-image: url('images/nutrition.jpg');
-  transition: transform .2s;
-}
-.workouts {
-  background-image: url('images/workouts.jpg');
-  transition: transform .2s;
-}
-.clothing, .nutrition, .workouts {
-  font-family: ltg_menu;
-  color: black;
-  font-size: 30px;
-  padding: 50px;
-  background-size: cover;
-  cursor: default;
-  text-decoration: none;
-}
-.clothing:hover, .nutrition:hover, .workouts:hover {
-  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-@media (min-width: 1200px) {
-  .clothing, .nutrition, .workouts {
-    float: left;
-    width: 500px;
-    height: 200px;
-    margin-left: 5%;
-    margin-bottom: 5%;
-  }
+#emailHelp {
+  color: white;
 }
 /*******************************/
 /*******************************/
 /*******************************/
 </style>
 </head>
+
 <body onclick="dropdownClose()">
 <!---->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+<!---------------------------------------------------------------------------------->
+<!--                           Menu for desktops                                  -->
+<!---------------------------------------------------------------------------------->
 
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="images/cover_new_1.jpg" alt="Image" class="img-responsive" id="cover_1">
-        <div class="carousel-caption">
-          <!---Tekstas karuselėje-->
-        </div>
-      </div>
-    <div class="item">
-        <img src="images/cover_new_1_blurred.jpg" alt="Image" class="img-responsive" id="cover_2">
-        <div class="carousel-caption">
-          <!---Tekstas karuselėje-->
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="images/cover_new_2.jpg" alt="Image" class="img-responsive" id="cover_3">
-        <div class="carousel-caption">
-          <!---Tekstas karuselėje-->
-        </div>
-      </div>
-    </div>
-
-    <!-- Left and right controls
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>-->
-</div>
-
-<div class="merch .container-fluid">
-  <div "row">
-    <a class="nutrition .col-lg-4" href=""><div><center>Mityba<center></div></a>
-    <a class="workouts .col-lg-4" href=""><div><center>Sporto programos<center></div></a>
-    <a class="clothing .col-lg-4" href=""><div><center>Apranga<center></div></a>
+<!---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------->
+<!--                           Menu for mobiles and tablets                       -->
+<!---------------------------------------------------------------------------------->
+<div class="header menu col-xs-12 col-sm-12 hidden-lg hidden-xl hidden-md">
+<li class="left_menu_item"><a id="ltg_title" href="/"><img src="images/ltg_logo.png" alt="Image" class="img-responsive left_menu_item" id="ltg_title"></a></li>
+  <span onclick="mobileDropdown()" class="dropbtn-mobile glyphicon glyphicon-menu-hamburger"></span>
+  <div id="myDropdown-mobile" class="dropdown-content-mobile">
+  	<a href="/">Pagrindinis</a>
+    <a href="paslaugos">Paslaugos</a>
+    <a href="http://facebook.com/liftingtogreatness">Straipsniai</a>
+    <a href="kontaktai">Kontaktai</a>
+    <a href="apie">Apie</a>
   </div>
 </div>
 
-<div class="container text-center instagram">
-  <h3 id="insta_text">Instagram feed naujienos</h3>
-  <div class="alignPost">
-    <a id="instafeed"></a>
+<!---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------->
+<div class="content paragraphs">
+  <div class="row">
+    <div class="span4">
+      <div class="col-sm-12 contact_menu">
+        <form action="mailto:liftinggreatness@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="contactName">Vardas</label>
+            <input type="text" class="form-control" id="contactName" aria-describedby="name" placeholder="Vardas">
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">El. paštas</label>
+            <input type="email" class="form-control" id="contactEmail" aria-describedby="email" placeholder="Įveskite savo el. pašto adresą">
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Telefono numeris</label>
+            <input type="number" class="form-control" id="phoneNumber2" aria-describedby="number" placeholder="Įveskite savo telefono numerį">
+          </div>
+          <div class="form-group">
+            <label for="userLetter">Jūsų laiškas:</label>
+            <textarea class="form-control" id="userLetter" rows="7"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Siųsti</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -365,13 +335,13 @@
       </a>
     </div>
   </div>
-  <!-- <div class="col-sm-6 col-xs-12 atsiskaitymas">
+  <div class="col-sm-6 col-xs-12 atsiskaitymas">
     <br>
     <b> Atsiskaitymo būdai:</b>
     <div class="row">
       <img src="images/banks.png"></img>
     </div>
-  </div> -->
+  </div>
 </div>
 <div class="row">
   <div class="col-xs-12 text-center">
@@ -382,9 +352,6 @@
 </div>
 </footer>
 <div class="menu_bg"></div>
-<!---------------------------------------------------------------------------------->
-<!--                           Menu for desktops                                  -->
-<!---------------------------------------------------------------------------------->
 <div class="header menu hidden-xs hidden-sm">
   <div class="container-fluid header_grey">
     <ul class="left-menu">
@@ -396,46 +363,18 @@
       <li class="left_menu_item"><a class="left_menu_item" href="apie">Apie</a></li>
     </ul>
     <ul class="right-menu">
-        @auth
-          <li class="logoutbtn">
-              <a href="logout" title="Atsijungti" class="right_menu_item lower"><img alt="image" src="images/doorIcon2.png"></a>
-          </li>
-        @endauth
-      <li class="user-menu">
-        <div class="dropdown">
-          <a onclick="desktopDropdown()" title="Meniu" class="dropbtn glyphicon glyphicon-menu-hamburger right_menu_item lower" style="color:#009BC1"></a>
-              <div id="myDropdown" class="dropdown-content">
-                <a href="/">Pagrindinis</a>
-                <a href="apie">Apie</a>
-                <a href="kontaktai">Kontaktai</a>
-              </div>
-        </div>
-      </li>
-      @guest
-      <li class="login-register">
-          <a href="login2" title="Prisijungti" class="glyphicon glyphicon-user blue right_menu_item" style="color:#009BC1"></a>
-      </li>
-      @endguest
+      <div class="dropdown">
+        <a onclick="desktopDropdown()" class="dropbtn glyphicon glyphicon-menu-hamburger right_menu_item"></a>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/">Pagrindinis</a>
+            <a href="apie">Apie</a>
+            <a href="kontaktai">Kontaktai</a>
+          </div>
+      </div>
+      <a href="login2" class="glyphicon glyphicon-user right_menu_item"></a>
     </ul>
   </div>
 </div>
-<!---------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-<!--                           Menu for mobiles and tablets                       -->
-<!---------------------------------------------------------------------------------->
-<div class="header menu col-xs-12 col-sm-12 hidden-lg hidden-xl hidden-md">
-    <li class="left_menu_item"><a id="ltg_title" href="/"><img src="images/ltg_logo.png" alt="Image" class="img-responsive left_menu_item" id="ltg_title"></a></li>
-      <span onclick="mobileDropdown()" class="dropbtn-mobile glyphicon glyphicon-menu-hamburger"></span>
-      <div id="myDropdown-mobile" class="dropdown-content-mobile">
-        <a href="/">Pagrindinis</a>
-        <a href="paslaugos">Paslaugos</a>
-        <a href="http://facebook.com/liftingtogreatness">Straipsniai</a>
-        <a href="kontaktai">Kontaktai</a>
-        <a href="apie">Apie</a>
-      </div>
-    </div>
-
-<!---------------------------------------------------------------------------------->
 <div class="container text-center" id="social_box">
     <div class="row" id="social_icons">
       <a href="http://facebook.com/liftingtogreatness" class="btn btn-social-icon btn-facebook">
@@ -450,24 +389,6 @@
     </div>
 </div>
 </body>
-
-<!----------------------->
-<!-- Javascript stuff -->
-<!----------------------->
-<!-- @include('pages/instafeed')  -->
-<script type="text/javascript" src="{{ URL::asset('js/instafeed.min.js') }}"></script>
-
-<script type="text/javascript">
-  var userFeed = new Instafeed({
-      get: 'user',
-      userId: '286388958',
-      accessToken: '286388958.1677ed0.113bca76ca1044dfa23d70a8de95c16a',
-      limit: '4',
-      resolution: 'low_resolution'
-  });
- userFeed.run();
-</script>
-
 <script language="javascript">
 
 function desktopDropdown() {
@@ -509,5 +430,4 @@ window.onclick = function(event) {
   }
 }
 </script>
-
 </html>
