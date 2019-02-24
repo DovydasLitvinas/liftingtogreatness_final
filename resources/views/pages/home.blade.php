@@ -1,5 +1,43 @@
 @extends('layouts.app')
 @section('home')
+<style>
+  .merch {
+    padding-top: 5%;
+  }
+  .clothing {
+    background-image: url('images/shirt_stockimage.jpg');
+    transition: transform .2s;
+  }
+  .nutrition {
+    background-image: url('images/nutrition.jpg');
+    transition: transform .2s;
+  }
+  .workouts {
+    background-image: url('images/workouts.jpg');
+    transition: transform .2s;
+  }
+  .clothing, .nutrition, .workouts {
+    font-family: ltg_menu;
+    color: black;
+    font-size: 30px;
+    padding: 50px;
+    background-size: cover;
+    cursor: default;
+    text-decoration: none;
+  }
+  .clothing:hover, .nutrition:hover, .workouts:hover {
+    transform: scale(1.1);
+  }
+  @media (min-width: 1200px) {
+    .clothing, .nutrition, .workouts {
+      float: left;
+      width: 500px;
+      height: 200px;
+      margin-left: 5%;
+      margin-bottom: 5%;
+    }
+  }
+</style>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -42,9 +80,9 @@
 
 <div class="merch .container-fluid">
   <div "row">
-    <a class="nutrition .col-lg-4" href=""><div><center>Mityba<center></div></a>
-    <a class="workouts .col-lg-4" href=""><div><center>Sporto programos<center></div></a>
-    <a class="clothing .col-lg-4" href=""><div><center>Apranga<center></div></a>
+    <a class="nutrition .col-lg-4" href="mityba"><div><center>Mityba<center></div></a>
+    <a class="workouts .col-lg-4" href="sporto-programos"><div><center>Sporto programos<center></div></a>
+    <a class="clothing .col-lg-4" href="apranga"><div><center>Apranga<center></div></a>
   </div>
 </div>
 

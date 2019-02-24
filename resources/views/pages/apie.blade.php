@@ -20,4 +20,13 @@
     </div>
   </div>
 </div>
+<script>
+$(function() {
+  var loc = window.location.href; // returns the full URL
+  if(/apie/.test(loc)) {
+    $('.left-menu li').removeClass('active');
+    $('#apie').addClass('active');
+  }
+});
+</script>
 @stop

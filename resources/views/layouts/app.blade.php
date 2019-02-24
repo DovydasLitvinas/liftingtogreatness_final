@@ -245,42 +245,6 @@
 .lower {
   margin-top: 20%;
 }
-.merch {
-  padding-top: 5%;
-}
-.clothing {
-  background-image: url('images/shirt_stockimage.jpg');
-  transition: transform .2s;
-}
-.nutrition {
-  background-image: url('images/nutrition.jpg');
-  transition: transform .2s;
-}
-.workouts {
-  background-image: url('images/workouts.jpg');
-  transition: transform .2s;
-}
-.clothing, .nutrition, .workouts {
-  font-family: ltg_menu;
-  color: black;
-  font-size: 30px;
-  padding: 50px;
-  background-size: cover;
-  cursor: default;
-  text-decoration: none;
-}
-.clothing:hover, .nutrition:hover, .workouts:hover {
-  transform: scale(1.1);
-}
-@media (min-width: 1200px) {
-  .clothing, .nutrition, .workouts {
-    float: left;
-    width: 500px;
-    height: 200px;
-    margin-left: 5%;
-    margin-bottom: 5%;
-  }
-}
 /*******************************/
 /*******************************/
 /*******************************/
@@ -289,6 +253,9 @@
 <body onclick="dropdownClose()">
 
 @yield('home')
+@yield('mityba')
+@yield('sporto-programos')
+@yield('apranga')
 @yield('kontaktai')
 @yield('apie')
 @yield('login')
@@ -337,11 +304,11 @@
   <div class="container-fluid header_grey">
     <ul class="left-menu">
       <li class="left_menu_item"><a id="ltg_title" href="/"><img src="images/ltg_logo.png" alt="Image" class="img-responsive left_menu_item" id="ltg_title"></a></li>
-      <li class="active left_menu_item"><a href="/">Pagrindinis</a></li>
-      <li class="left_menu_item"><a href="paslaugos">Paslaugos</a></li>
+      <li class="active left_menu_item" id="pagrindinis"><a href="/">Pagrindinis</a></li>
+      <li class="left_menu_item" id="paslaugos"><a href="mityba">Paslaugos</a></li>
       <li class="left_menu_item"><a class="left_menu_item" href="http://facebook.com/liftingtogreatness">Straipsniai</a></li>
-      <li class="left_menu_item"><a class="left_menu_item" href="kontaktai">Kontaktai</a></li>
-      <li class="left_menu_item"><a class="left_menu_item" href="apie">Apie</a></li>
+      <li class="left_menu_item" id="kontaktai"><a class="left_menu_item" href="kontaktai">Kontaktai</a></li>
+      <li class="left_menu_item" id="apie"><a class="left_menu_item" href="apie">Apie</a></li>
     </ul>
     <ul class="right-menu">
         @auth
@@ -376,7 +343,7 @@
       <span onclick="mobileDropdown()" class="dropbtn-mobile glyphicon glyphicon-menu-hamburger"></span>
       <div id="myDropdown-mobile" class="dropdown-content-mobile">
         <a href="/">Pagrindinis</a>
-        <a href="paslaugos">Paslaugos</a>
+        <a href="mityba">Paslaugos</a>
         <a href="http://facebook.com/liftingtogreatness">Straipsniai</a>
         <a href="kontaktai">Kontaktai</a>
         <a href="apie">Apie</a>

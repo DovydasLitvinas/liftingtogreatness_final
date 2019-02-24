@@ -57,4 +57,13 @@ footer {
     </div>
   </div>
 </div>
+<script>
+$(function() {
+  var loc = window.location.href; // returns the full URL
+  if(/kontaktai/.test(loc)) {
+    $('.left-menu li').removeClass('active');
+    $('#kontaktai').addClass('active');
+  }
+});
+</script>
 @stop

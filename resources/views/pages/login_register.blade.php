@@ -302,5 +302,11 @@ $(function() {
     });
 
 });
+$(function() {
+  var loc = window.location.href; // returns the full URL
+  if(/login2/.test(loc)) {
+    $('.left-menu li').removeClass('active');
+  }
+});
 </script>
 @stop

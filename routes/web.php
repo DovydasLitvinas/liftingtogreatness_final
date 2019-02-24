@@ -17,9 +17,15 @@
 
 Auth::routes();
 Route::get('/', 'PagesController@index');
-Route::get('/apie', 'PagesController@apie');
+// Route::get('/paslaugos', 'PagesController@paslaugos');
 Route::get('/kontaktai', 'PagesController@kontaktai');
+Route::get('/apie', 'PagesController@apie');
 Route::get('/login2', 'PagesController@login2');
+
+//paslaugos
+Route::get('/mityba', 'PagesController@mityba');
+Route::get('/sporto-programos', 'PagesController@sportoProgramos');
+Route::get('/apranga', 'PagesController@apranga');
 
 Auth::routes();
 Route::get('/', 'PagesController@index');
