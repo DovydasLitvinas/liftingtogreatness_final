@@ -27,6 +27,7 @@
   }
   .clothing:hover, .nutrition:hover, .workouts:hover {
     transform: scale(1.1);
+    color: #0d8df0;
   }
   @media (min-width: 1200px) {
     .clothing, .nutrition, .workouts {

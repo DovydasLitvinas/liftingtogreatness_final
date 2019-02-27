@@ -26,7 +26,8 @@
     text-decoration: none;
   }
   .clothing:hover, .nutrition:hover, .workouts:hover {
-    transform: scale(1.1);
+    opacity: 0.7;
+    color: #0d8df0;
   }
   footer {
     margin-top: 1px;
@@ -64,16 +65,68 @@
       padding-top: calc(1vw + 71px);
       padding-left: 0;
     }
+    .firstColumnText{
+      height: 62vh;
+    }
+    .secondColumnText {
+      height: 64.2vh;
+    }
   }
   .merchContainer {
     padding-left: 0;
     padding-right: 0;
   }
-  .steak div {
-    word-wrap: break-word;
+  .steak, .nutritionIMG2 {
+    background-color: #a8a6a6;
   }
-  .contentBox {
-    background-color: grey;
+  .firstColumnText, .secondColumnText {
+    font-family: Verdana;
+    background-color: #a8a6a6;
+  }
+  .header {
+    color: #1c5e88;
+    font-family: ltg_menu;
+  }
+  .secondColumnText {
+    float: left;
+  }
+  /* Cool button */
+  button{
+    margin-top: 5%;
+    background:#4d5052;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  button:hover{
+    background:#fff;
+    color:#4d5052;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #4d5052;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
   }
 </style>
 <div class="merch .container-fluid">
@@ -83,13 +136,39 @@
     <a class="clothing .col-lg-4" href="apranga"><div><center>Apranga<center></div></a>
   </div>
 </div>
+<div class="container-fluid">
 <div class="container-fluid merchContainer">
-  <div class=".container-fluid mitybaContent">
-    <div clas="row contentBox">
-      <img class="col-lg-6" class="steak" src="images/steak.jpg"></img>
-      <div class="col-lg-6 firstColumnText"> TEXXXXXXXXXXXXXXXXXXXXXXXXXXT </div>
+  <div clas="row contentBox1">
+    <img class="col-lg-6 steak" src="images/steak2.jpg"></img>
+    <div class="col-lg-6 firstColumnText">
+      <br><center class="header"><h3><b>Invidualus mitybos planas, vyrams ir moterims!</b></h3></center><br>
+      <span class="paragraph1"<h4>Savęs paklausk šių klausimų:
+      <ul>
+        <li>Nori numesti svorio, bet nežinai nuo ko pradėti?</li>
+        <li>Nori priaugti raumenines masės su minimaliu kiekiu riebalų?</li>
+        <li>Nori atrodyti geriau veidrodyje, jaustis sveikesniu ir kupinas jėgų kiekvieną rytą?</li>
+        <li>Išbandei begales įvairių dietų ir programų salėje, bet nesiseka pasiekti akivaizdžių rezultatų?</li>
+      </ul></h4></span>
+      Jei atsakei į bent vieną iš šių klausimų - TAIP! Tada šis invidualios mitybos planas kaip tik TAU!
     </div>
   </div>
+</div>
+  <div clas="row contentBox2">
+    <div class="col-lg-6 secondColumnText">
+      <br><center class="header"><h3><b>Invidualus mitybos planas, vyrams ir moterims!</b></h3></center><br>
+      <span class="paragraph2"<h4>Savęs paklausk šių klausimų:
+      <ul>
+        <li>Nori numesti svorio, bet nežinai nuo ko pradėti?</li>
+        <li>Nori priaugti raumenines masės su minimaliu kiekiu riebalų?</li>
+        <li>Nori atrodyti geriau veidrodyje, jaustis sveikesniu ir kupinas jėgų kiekvieną rytą?</li>
+        <li>Išbandei begales įvairių dietų ir programų salėje, bet nesiseka pasiekti akivaizdžių rezultatų?</li>
+      </ul></h4></span>
+      Jei atsakei į bent vieną iš šių klausimų - TAIP! Tada šis invidualios mitybos planas kaip tik TAU!<br>
+      <center><button>Užsakyti dabar!</button></center>
+    </div>
+    <img class="col-lg-6 nutritionIMG2" src="images/nutrition2Stock.jpg"></img>
+  </div>
+</div>
 </div>
 <script>
 $(function() {
