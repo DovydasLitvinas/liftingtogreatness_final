@@ -260,7 +260,7 @@
 @yield('apie')
 @yield('login')
 
-<footer class="container-fluid">
+<footer class="container-fluid footer">
 <div class="row">
   <div class="col-sm-6 col-xs-12">
     <div class="row contact_info">

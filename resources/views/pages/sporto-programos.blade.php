@@ -76,7 +76,7 @@
 <script>
 $(function() {
   var loc = window.location.href; // returns the full URL
-  if(/paslaugos/.test(loc)) {
+  if(/sporto-programos/.test(loc)) {
     $('.left-menu li').removeClass('active');
     $('#paslaugos').addClass('active');
   }

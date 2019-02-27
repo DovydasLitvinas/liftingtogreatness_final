@@ -59,11 +59,21 @@
       float: left;
       width: 33.33%;
       height: 200px;
-      margin-bottom: 5%;
     }
     .merch {
       padding-top: calc(1vw + 71px);
+      padding-left: 0;
     }
+  }
+  .merchContainer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .steak div {
+    word-wrap: break-word;
+  }
+  .contentBox {
+    background-color: grey;
   }
 </style>
 <div class="merch .container-fluid">
@@ -73,10 +83,18 @@
     <a class="clothing .col-lg-4" href="apranga"><div><center>Apranga<center></div></a>
   </div>
 </div>
+<div class="container-fluid merchContainer">
+  <div class=".container-fluid mitybaContent">
+    <div clas="row contentBox">
+      <img class="col-lg-6" class="steak" src="images/steak.jpg"></img>
+      <div class="col-lg-6 firstColumnText"> TEXXXXXXXXXXXXXXXXXXXXXXXXXXT </div>
+    </div>
+  </div>
+</div>
 <script>
 $(function() {
   var loc = window.location.href; // returns the full URL
-  if(/paslaugos/.test(loc)) {
+  if(/mityba/.test(loc)) {
     $('.left-menu li').removeClass('active');
     $('#paslaugos').addClass('active');
   }
