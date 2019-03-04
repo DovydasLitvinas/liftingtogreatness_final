@@ -78,7 +78,6 @@
       <span class="sr-only">Next</span>
     </a> -->
 </div>
-
 <div class="merch .container-fluid">
   <div "row">
     <a class="nutrition .col-lg-4" href="mityba"><div><center>Mityba<center></div></a>

@@ -128,6 +128,7 @@
     width:100%;
     transition:800ms ease all;
   }
+  li {display: list-item ;}
 </style>
 <div class="merch .container-fluid">
   <div "row">
@@ -143,7 +144,7 @@
     <div class="col-lg-6 firstColumnText">
       <br><center class="header"><h3><b>Invidualus mitybos planas, vyrams ir moterims!</b></h3></center><br>
       <span class="paragraph1"<h4>Savęs paklausk šių klausimų:
-      <ul>
+      <ul style="list-style-type:circle;">
         <li>Nori numesti svorio, bet nežinai nuo ko pradėti?</li>
         <li>Nori priaugti raumenines masės su minimaliu kiekiu riebalų?</li>
         <li>Nori atrodyti geriau veidrodyje, jaustis sveikesniu ir kupinas jėgų kiekvieną rytą?</li>
@@ -157,7 +158,7 @@
     <div class="col-lg-6 secondColumnText">
       <br><center class="header"><h3><b>Invidualus mitybos planas, vyrams ir moterims!</b></h3></center><br>
       <span class="paragraph2"<h4>Savęs paklausk šių klausimų:
-      <ul>
+      <ul style="list-style-type:circle;">
         <li>Nori numesti svorio, bet nežinai nuo ko pradėti?</li>
         <li>Nori priaugti raumenines masės su minimaliu kiekiu riebalų?</li>
         <li>Nori atrodyti geriau veidrodyje, jaustis sveikesniu ir kupinas jėgų kiekvieną rytą?</li>

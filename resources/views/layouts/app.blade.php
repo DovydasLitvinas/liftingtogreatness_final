@@ -226,12 +226,11 @@
 .insta_img {
 	position: static;
 }
-.userName {
-  float: left;
-  padding-top: 23%;
-  color: white;
-}
 .logoutbtn {
+  margin-top: -15px;
+  float: right;
+}
+.username{
   float: right;
 }
 .login-register {
@@ -244,6 +243,38 @@
 }
 .lower {
   margin-top: 20%;
+}
+@media (max-width: 497px){
+  .username{
+    margin-top: 2%;
+  }
+}
+@media (min-width: 498px) and (max-width: 768px){
+  .username{
+    margin-top: 2.5%;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .username{
+    margin-top: 3%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .username{
+    margin-top: 3.5%;
+  }
+}
+@media (min-width: 1200px) {
+
+}
+.loginMessage, .logoutMessage {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  margin-top: 4.5%;
+  transition: all 2s linear;
+  opacity: 0.9;
 }
 /*******************************/
 /*******************************/
@@ -300,7 +331,7 @@
 <!---------------------------------------------------------------------------------->
 <!--                           Menu for desktops                                  -->
 <!---------------------------------------------------------------------------------->
-<div class="header menu hidden-xs hidden-sm">
+<div class="header menu hidden-xs hidden-sm hidden-md">
   <div class="container-fluid header_grey">
     <ul class="left-menu">
       <li class="left_menu_item"><a id="ltg_title" href="/"><img src="images/ltg_logo.png" alt="Image" class="img-responsive left_menu_item" id="ltg_title"></a></li>
@@ -313,7 +344,7 @@
     <ul class="right-menu">
         @auth
           <li class="logoutbtn">
-              <a href="logout" title="Atsijungti" class="right_menu_item lower"><img alt="image" src="images/doorIcon2.png"></a>
+              <a href="logout" title="Atsijungti" class="right_menu_item lower"><img alt="image" src="images/doorIcon2.png ">Atsijungti</a>
           </li>
         @endauth
       <li class="user-menu">
@@ -326,6 +357,9 @@
               </div>
         </div>
       </li>
+      @auth
+      <li class="username">Sveiki, <span class="usernameColor"> &nbsp; {{ Auth::user()->name }}</span></li>
+      @endauth
       @guest
       <li class="login-register">
           <a href="login2" title="Prisijungti" class="glyphicon glyphicon-user blue right_menu_item" style="color:#009BC1"></a>
@@ -338,7 +372,7 @@
 <!---------------------------------------------------------------------------------->
 <!--                           Menu for mobiles and tablets                       -->
 <!---------------------------------------------------------------------------------->
-<div class="header menu col-xs-12 col-sm-12 hidden-lg hidden-xl hidden-md">
+<div class="header menu col-xs-12 col-sm-12 hidden-lg hidden-xl">
     <li class="left_menu_item"><a id="ltg_title" href="/"><img src="images/ltg_logo.png" alt="Image" class="img-responsive left_menu_item" id="ltg_title"></a></li>
       <span onclick="mobileDropdown()" class="dropbtn-mobile glyphicon glyphicon-menu-hamburger"></span>
       <div id="myDropdown-mobile" class="dropdown-content-mobile">
@@ -348,7 +382,14 @@
         <a href="kontaktai">Kontaktai</a>
         <a href="apie">Apie</a>
       </div>
-    </div>
+    @auth
+    <li class="username">Sveiki, <span class="usernameColor"> &nbsp; {{ Auth::user()->name }}</span></li>
+    @endauth
+</div>
+@if (session()->has('flash_loginNotification.success')) <div class="alert alert-success loginMessage" ><center>{!! session('flash_loginNotification.success') !!}</center></div>
+@endif
+@if (session()->has('flash_logoutNotification.success')) <div class="alert alert-danger logoutMessage" ><center>{!! session('flash_logoutNotification.success') !!}</center></div>
+@endif
 
 <!---------------------------------------------------------------------------------->
 <div class="container text-center" id="social_box">
@@ -408,6 +449,11 @@ window.onclick = function(event) {
     }
   }
 }
+
+//Clear login message timeout
+$(document).ready( function() {
+        $('.loginMessage, .logoutMessage').delay(3000).fadeOut(1000);
+});
 </script>
 
 </html>

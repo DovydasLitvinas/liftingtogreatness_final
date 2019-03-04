@@ -29,6 +29,12 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/';
 
+    protected function authenticated(Request $request, $user)
+    {
+       $name = \Auth::user()->name;
+       $request->session()->flash('flash_loginNotification.success', 'Sveikiname prisijungus, '. $name . '!');
+       return redirect()->intended($this->redirectPath());
+    }
     /**
      * Create a new controller instance.
      *
@@ -40,6 +46,7 @@ class LoginController extends Controller
     }
     public function logout(Request $request) {
         Auth::logout();
+        $request->session()->flash('flash_logoutNotification.success', 'Jūs atsijungėte!');
         return redirect('/');
     }
 }
