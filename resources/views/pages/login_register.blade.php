@@ -246,6 +246,65 @@ footer {
                         </div>
 
                         <div class="form-group row">
+                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Lytis') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="gender" class="form-control{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" value="{{ old('gender') }}" required>
+                                    <option value="male">Vyras</option>
+                                    <option value="female">Moteris</option>
+                                    <option value="other">Kita</option>
+                                </select>
+                                @if ($errors->has('gender'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('gender') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Amžius') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="age" type="number" class="form-control{{ $errors->has('age') ? ' is-invalid' : '' }}" name="age" value="{{ old('age') }}" required>
+
+                                @if ($errors->has('age'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('age') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="height" class="col-md-4 col-form-label text-md-right">{{ __('Ūgis') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="height" type="number" class="form-control{{ $errors->has('height') ? ' is-invalid' : '' }}" name="height" value="{{ old('height') }}" required>
+
+                                @if ($errors->has('height'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('height') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="weight" class="col-md-4 col-form-label text-md-right">{{ __('Svoris') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="weight" type="number" class="form-control{{ $errors->has('weight') ? ' is-invalid' : '' }}" name="weight" value="{{ old('weight') }}" required>
+
+                                @if ($errors->has('weight'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('weight') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Slaptažodis') }}</label>
 
                             <div class="col-md-6">
@@ -268,7 +327,7 @@ footer {
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6-center" style="text-align:center;">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Registruotis') }}
                                 </button>

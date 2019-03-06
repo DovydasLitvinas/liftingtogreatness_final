@@ -267,7 +267,7 @@
 @media (min-width: 1200px) {
 
 }
-.loginMessage, .logoutMessage {
+.loginMessage, .logoutMessage, .registerMessage {
   position: fixed;
   display: block;
   top: 0;
@@ -390,6 +390,8 @@
 @endif
 @if (session()->has('flash_logoutNotification.success')) <div class="alert alert-danger logoutMessage" ><center>{!! session('flash_logoutNotification.success') !!}</center></div>
 @endif
+<!-- @if (session()->has('flash_registerNotification.success')) <div class="alert alert-success registerMessage" ><center>{!! session('flash_registerNotification.success') !!}</center></div>
+@endif -->
 
 <!---------------------------------------------------------------------------------->
 <div class="container text-center" id="social_box">

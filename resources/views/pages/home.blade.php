@@ -79,10 +79,10 @@
     </a> -->
 </div>
 <div class="merch .container-fluid">
-  <div "row">
-    <a class="nutrition .col-lg-4" href="mityba"><div><center>Mityba<center></div></a>
-    <a class="workouts .col-lg-4" href="sporto-programos"><div><center>Sporto programos<center></div></a>
-    <a class="clothing .col-lg-4" href="apranga"><div><center>Apranga<center></div></a>
+  <div class="row">
+    <a class="nutrition .col-lg-4" href="mityba"><div><center>Mityba</center></div></a>
+    <a class="workouts .col-lg-4" href="sporto-programos"><div><center>Sporto programos</center></div></a>
+    <a class="clothing .col-lg-4" href="apranga"><div><center>Apranga</center></div></a>
   </div>
 </div>
 

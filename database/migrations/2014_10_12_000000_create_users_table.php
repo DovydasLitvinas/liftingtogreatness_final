@@ -17,7 +17,14 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('phoneNumber');
+            $table->string('gender');
+            $table->integer('age');
+            $table->float('height');
+            $table->float('weight');
             $table->string('password');
+            $table->boolean('nutritionProgram')->default(0);
+            $table->boolean('workoutProgram')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

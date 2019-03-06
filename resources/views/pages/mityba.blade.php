@@ -131,7 +131,7 @@
   li {display: list-item ;}
 </style>
 <div class="merch .container-fluid">
-  <div "row">
+  <div class="row">
     <a class="nutrition .col-lg-4" href="mityba"><div><center>Mityba<center></div></a>
     <a class="workouts .col-lg-4" href="sporto-programos"><div><center>Sporto programos<center></div></a>
     <a class="clothing .col-lg-4" href="apranga"><div><center>Apranga<center></div></a>
@@ -165,7 +165,7 @@
         <li>Išbandei begales įvairių dietų ir programų salėje, bet nesiseka pasiekti akivaizdžių rezultatų?</li>
       </ul></h4></span>
       Jei atsakei į bent vieną iš šių klausimų - TAIP! Tada šis invidualios mitybos planas kaip tik TAU!<br>
-      <center><button>Užsakyti dabar!</button></center>
+      <center><button method="post">Užsakyti dabar!</button></center>
     </div>
     <img class="col-lg-6 nutritionIMG2" src="images/nutrition2Stock.jpg"></img>
   </div>

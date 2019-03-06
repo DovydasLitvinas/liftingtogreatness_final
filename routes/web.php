@@ -29,4 +29,4 @@ Route::get('/apranga', 'PagesController@apranga');
 
 Auth::routes();
 Route::get('/', 'PagesController@index');
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

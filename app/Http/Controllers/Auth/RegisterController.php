@@ -51,6 +51,11 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'phoneNumber' => 'required|string|digits_between:10,13',
+            'gender' => 'required',
+            'age' => 'required|digits_between:1,3',
+            'height' => 'required|digits_between:1,3',
+            'weight' => 'required|digits_between:1,3',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -66,7 +71,13 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phoneNumber' => $data['phoneNumber'],
+            'gender' => $data['gender'],
+            'age' => $data['age'],
+            'height' => $data['height'],
+            'weight' => $data['weight'],
             'password' => Hash::make($data['password']),
         ]);
+        // $request->session()->flash('flash_registerNotification.success', 'Sveikiname jūs sekmingai užsiregistravote!');
     }
 }

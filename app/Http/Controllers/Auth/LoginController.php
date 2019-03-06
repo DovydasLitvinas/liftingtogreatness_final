@@ -31,7 +31,7 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-       $name = \Auth::user()->name;
+       $name = Auth::user()->name;
        $request->session()->flash('flash_loginNotification.success', 'Sveikiname prisijungus, '. $name . '!');
        return redirect()->intended($this->redirectPath());
     }
