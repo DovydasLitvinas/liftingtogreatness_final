@@ -27,6 +27,10 @@ Route::get('/mityba', 'PagesController@mityba');
 Route::get('/sporto-programos', 'PagesController@sportoProgramos');
 Route::get('/apranga', 'PagesController@apranga');
 
+//Checkouts
+Route::get('/mityba-survey', 'PagesController@mitybaCheckout');
+Route::get('/checkout', 'PagesController@checkout');
+
 Auth::routes();
 Route::get('/', 'PagesController@index');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

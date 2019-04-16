@@ -32,4 +32,11 @@ class PagesController extends Controller
     public function apranga(){
       return view('pages.apranga');
     }
+    //Checkout
+    public function mitybaCheckout(){
+      return view('pages.mityba-survey');
+    }
+    public function checkout(){
+      return view('pages.checkout');
+    }
 }

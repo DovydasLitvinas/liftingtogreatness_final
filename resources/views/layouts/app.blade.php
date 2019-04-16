@@ -290,6 +290,8 @@
 @yield('kontaktai')
 @yield('apie')
 @yield('login')
+@yield('mitybaCheckout')
+@yield('checkout')
 
 <footer class="container-fluid footer">
 <div class="row">

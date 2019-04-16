@@ -165,7 +165,7 @@
         <li>Išbandei begales įvairių dietų ir programų salėje, bet nesiseka pasiekti akivaizdžių rezultatų?</li>
       </ul></h4></span>
       Jei atsakei į bent vieną iš šių klausimų - TAIP! Tada šis invidualios mitybos planas kaip tik TAU!<br>
-      <center><button method="post">Užsakyti dabar!</button></center>
+      <center><button method="post" onClick="window.location='mityba-survey'">Užsakyti dabar!</button></center>
     </div>
     <img class="col-lg-6 nutritionIMG2" src="images/nutrition2Stock.jpg"></img>
   </div>

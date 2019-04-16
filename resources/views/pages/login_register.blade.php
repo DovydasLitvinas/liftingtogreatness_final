@@ -4,7 +4,7 @@
 .content {
   padding-left: 10%;
   padding-right: 10%;
-  background-image: url('images/dumbbells.jpg');
+  background-image: url('images/dumbbells3.jpg');
   background-repeat: no-repeat;
 }
 
