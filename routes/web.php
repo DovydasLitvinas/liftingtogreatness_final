@@ -21,6 +21,10 @@ Route::get('/', 'PagesController@index');
 Route::get('/kontaktai', 'PagesController@kontaktai');
 Route::get('/apie', 'PagesController@apie');
 Route::get('/login2', 'PagesController@login2');
+Route::get('/password-reset', 'PagesController@password_reset');
+
+//Menu items, user
+Route::get('/zinutes', 'PagesController@zinutes');
 
 //paslaugos
 Route::get('/mityba', 'PagesController@mityba');

@@ -194,7 +194,7 @@ footer {
                                     {{ __('Prisijungti') }}
                                 </button>
 
-                                <a class="btn btn-link" style="color: grey" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" style="color: grey" href="/password-reset">
                                     {{ __('Užmiršai slaptažodį?') }}
                                 </a>
                             </div>

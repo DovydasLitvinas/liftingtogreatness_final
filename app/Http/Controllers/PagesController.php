@@ -22,6 +22,13 @@ class PagesController extends Controller
     public function login2(){
         return view('pages.login_register');
     }
+    public function password_reset(){
+      return view('auth.passwords.email');
+  }
+    //Zinutes
+    public function zinutes(){
+      return view('pages.zinutes');
+    }
     //paslaugos
     public function mityba(){
       return view('pages.mityba');

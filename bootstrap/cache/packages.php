@@ -48,4 +48,15 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'shalvah/pusher-chatkit-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Chatkit\\Laravel\\ChatkitServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Chatkit' => 'Chatkit\\Laravel\\Facades\\Chatkit',
+    ),
+  ),
 );

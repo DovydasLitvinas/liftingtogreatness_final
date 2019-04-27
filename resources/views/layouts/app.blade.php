@@ -292,6 +292,8 @@
 @yield('login')
 @yield('mitybaCheckout')
 @yield('checkout')
+@yield('zinutes')
+@yield('password_reset')
 
 <footer class="container-fluid footer">
 <div class="row">
@@ -324,7 +326,7 @@
 <div class="row">
   <div class="col-xs-12 text-center">
     <br>
-    <b>"Lifting to Greatness" @ Visos teisės saugomos, 2017<b><br>
+    <b>"Lifting to Greatness" @ Visos teisės saugomos, 2019<b><br>
       <b>Svetainę sukūrė - Dovydas Litvinas</b>
   </div>
 </div>
@@ -348,7 +350,18 @@
           <li class="logoutbtn">
               <a href="logout" title="Atsijungti" class="right_menu_item lower"><img alt="image" src="images/doorIcon2.png ">Atsijungti</a>
           </li>
-        @endauth
+          <li class="user-menu">
+        <div class="dropdown">
+          <a onclick="desktopDropdown()" title="Meniu" class="dropbtn glyphicon glyphicon-menu-hamburger right_menu_item lower" style="color:#009BC1"></a>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="zinutes">Žinutės</a>
+                <a href="apie">l</a>
+                <a href="kontaktai">l</a>
+              </div>
+        </div>
+      </li>
+      @endauth
+      @guest
       <li class="user-menu">
         <div class="dropdown">
           <a onclick="desktopDropdown()" title="Meniu" class="dropbtn glyphicon glyphicon-menu-hamburger right_menu_item lower" style="color:#009BC1"></a>
@@ -359,6 +372,7 @@
               </div>
         </div>
       </li>
+      @endguest
       @auth
       <li class="username">Sveiki, <span class="usernameColor"> &nbsp; {{ Auth::user()->name }}</span></li>
       @endauth
