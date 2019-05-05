@@ -21,10 +21,14 @@ Route::get('/', 'PagesController@index');
 Route::get('/kontaktai', 'PagesController@kontaktai');
 Route::get('/apie', 'PagesController@apie');
 Route::get('/login2', 'PagesController@login2');
-Route::get('/password-reset', 'PagesController@password_reset');
+Route::get('/password-reset', '\App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm');
+Route::post('/password/email', '\App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::get('/password/reset/{token}', '\Auth\ResetPasswordController@showResetForm');
+Route::post('/password/reset', '\Auth\ResetPasswordController@reset');
+
 
 //Menu items, user
-Route::get('/zinutes', 'PagesController@zinutes');
+Route::get('/paskyra', 'PagesController@paskyra');
 
 //paslaugos
 Route::get('/mityba', 'PagesController@mityba');
@@ -36,5 +40,4 @@ Route::get('/mityba-survey', 'PagesController@mitybaCheckout');
 Route::get('/checkout', 'PagesController@checkout');
 
 Auth::routes();
-Route::get('/', 'PagesController@index');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

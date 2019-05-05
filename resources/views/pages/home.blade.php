@@ -78,7 +78,7 @@
       <span class="sr-only">Next</span>
     </a> -->
 </div>
-<div class="merch .container-fluid">
+<div class="merch container-fluid">
   <div class="row">
     <a class="nutrition .col-lg-4" href="mityba"><div><center>Mityba</center></div></a>
     <a class="workouts .col-lg-4" href="sporto-programos"><div><center>Sporto programos</center></div></a>
@@ -93,6 +93,7 @@
   </div>
 </div>
 <!-- @include('pages/instafeed')  -->
+
 <script type="text/javascript" src="{{ URL::asset('js/instafeed.min.js') }}"></script>
 <script type="text/javascript">
   var userFeed = new Instafeed({

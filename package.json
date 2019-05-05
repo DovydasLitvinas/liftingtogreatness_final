@@ -20,12 +20,16 @@
         "lodash": "^4.17.4",
         "popper.js": "^1.12",
         "react": "^16.2.0",
-        "react-dom": "^16.2.0"
+        "react-dom": "^16.2.0",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.19.0",
+        "sass-loader": "^7.1.0"
     },
     "dependencies": {
         "@pusher/chatkit-client": "^1.4.1",
         "@pusher/chatkit-server": "^1.1.0",
         "react-chat-window": "^1.2.1",
+        "react-router": "^2.8.1",
         "webpack-dev-server": "^3.2.1"
     }
 }

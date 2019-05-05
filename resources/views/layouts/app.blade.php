@@ -292,7 +292,7 @@
 @yield('login')
 @yield('mitybaCheckout')
 @yield('checkout')
-@yield('zinutes')
+@yield('paskyra')
 @yield('password_reset')
 
 <footer class="container-fluid footer">
@@ -354,7 +354,7 @@
         <div class="dropdown">
           <a onclick="desktopDropdown()" title="Meniu" class="dropbtn glyphicon glyphicon-menu-hamburger right_menu_item lower" style="color:#009BC1"></a>
               <div id="myDropdown" class="dropdown-content">
-                <a href="zinutes">Žinutės</a>
+                <a href="paskyra">Vartotojo Paskyra</a>
                 <a href="apie">l</a>
                 <a href="kontaktai">l</a>
               </div>

@@ -25,9 +25,9 @@ class PagesController extends Controller
     public function password_reset(){
       return view('auth.passwords.email');
   }
-    //Zinutes
-    public function zinutes(){
-      return view('pages.zinutes');
+    //Vartotojo valdykle
+    public function paskyra(){
+      return view('pages.paskyra');
     }
     //paslaugos
     public function mityba(){
